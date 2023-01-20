@@ -11,12 +11,13 @@ import {
   icon
 } from '@fortawesome/fontawesome-svg-core/import.macro';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import styles from './main.module.css';
 export const siteTitle = 'Spotify';
 
 export default function NavbarMenu() {
   return (
-    <nav className='nav-bar px-6 py-6 col-span-1'>
-      <a href="/" className='logo'>
+    <nav className='nav-bar px-6 py-6 col-span-1 text-white h-screen'>
+      <a href="/" className='logom pb-6 block'>
         <Image
               priority
               src={logo}
@@ -27,13 +28,13 @@ export default function NavbarMenu() {
             />
       </a>
       <MenuList className='main-list'>
-        <MenuItem className='pl-0'> <FontAwesomeIcon className='pr-3 text-xl' icon={icon({ name: 'house-user', style: 'solid' })} /> Trang chủ</MenuItem>
-        <MenuItem className='pl-0'> <FontAwesomeIcon className='pr-3 text-xl' icon={icon({ name: 'magnifying-glass', style: 'solid' })} /> Tìm kiếm</MenuItem>
-        <MenuItem className='pl-0'> <FontAwesomeIcon className='pr-3 text-xl' icon={icon({ name: 'book', style: 'solid' })} /> Thư viện</MenuItem>
+        <MenuItem className='pl-0 pb-3 '> <FontAwesomeIcon className='pr-3 text-2xl' icon={icon({ name: 'house-user', style: 'solid' })} /> <span className='text-sm font-bold'>Trang chủ</span></MenuItem>
+        <MenuItem className='pl-0 pb-3 '> <FontAwesomeIcon className='pr-3 text-2xl' icon={icon({ name: 'magnifying-glass', style: 'solid' })} /> <span className='text-sm font-bold'>Tìm kiếm</span></MenuItem>
+        <MenuItem className='pl-0 pb-3 '> <FontAwesomeIcon className='pr-3 text-2xl' icon={icon({ name: 'book', style: 'solid' })} /> <span className='text-sm font-bold'>Thư viện</span></MenuItem>
       </MenuList>
       <MenuList className='footer-list'>
-        <MenuItem className='pl-0'> <FontAwesomeIcon className='pr-3 text-xl' icon={icon({ name: 'square-plus', style: 'solid' })} /> Tạo playlist</MenuItem>
-        <MenuItem className='pl-0'> <FontAwesomeIcon className='pr-3 text-xl' icon={icon({ name: 'heart', style: 'solid' })} /> Bài hát đã thích</MenuItem>
+        <MenuItem className='pl-0 pb-3 '> <FontAwesomeIcon className='pr-3 text-2xl' icon={icon({ name: 'square-plus', style: 'solid' })} /> <span className='text-sm font-bold'>Tạo playlist</span></MenuItem>
+        <MenuItem className='pl-0 pb-3 '> <FontAwesomeIcon className='pr-3 text-2xl' icon={icon({ name: 'heart', style: 'solid' })} /> <span className='text-sm font-bold'>Bài hát đã thích</span></MenuItem>
       </MenuList>
     </nav>
   );

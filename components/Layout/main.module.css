@@ -14,5 +14,18 @@
     margin: 3rem 0 0;
   }
   .encore_dark_theme{
-    /* background-color: black; */
+    background-color: rgb(0, 0, 0);
   }
+  .white-text{
+    color: #fff;
+  }
+  .menu_top{
+    background-color: #101010b8;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    width: 100%;
+    visibility: visible;
+    top: 0;
+}
